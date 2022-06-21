@@ -1,0 +1,145 @@
+/* /* Color Theme Swatches in Hex
+.LOTR_7-1-hex { gray: #3D4034; }
+.LOTR_7-2-hex { beige: #BDA778; }
+.LOTR_7-3-hex { white: #F2F0D5; }
+.LOTR_7-4-hex { pink: #BF9780; }
+.LOTR_7-5-hex { brown: #54483A; } 
+
+Ubuntu:wght@400;500;700
+
+font-family: 'Ubuntu', sans-serif;
+*/
+
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: 0px;
+    font-family: 'Ubuntu', sans-serif;
+    color: #3D4034;
+}
+
+
+a {
+    text-decoration: none;
+    color: #BF9780;
+}
+
+a:hover{
+    opacity: 0.8 ;
+}
+
+/* a: visited | active | focus */
+a:focus{
+    background-color: #00000035;
+}
+
+.title {
+    text-transform: uppercase;
+}
+
+h2{
+    margin-bottom: 1em;
+}
+
+.container {
+    background: #BF9780;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fffcdc, #BF9780);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fffcdc, #BF9780);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+	align-items: center;
+}
+
+.content {
+    max-width: 960px;
+    max-height: 600px;
+    width: 100%;
+    height: 100%;
+    background-color: #F2F0D5;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23) ;
+    /* diferenciaHorizontal  diferenciaVertical desenfoque amplitud color */
+    border-radius: 4px;
+    position: absolute; /* elemento posicionado */
+    margin-top: 100px;
+    padding: 1.8em;
+
+}
+
+.actions{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+.close{
+    height: 40px;
+    width: 40px;
+    color: #F2F0D5 !important;
+    border-radius: 50%;
+    background-color: #BF9780;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6 px rgba(0,0,0,0.23);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+
+.paragraph {
+    line-height: 1.8em;
+    text-align: justify;
+}
+
+.table{
+    width: 100%;
+    border-spacing:0;
+
+}
+.table td, .table th{
+    padding: 1em;
+    text-align: left;
+}
+.table tr:nth-child(even){
+background-color: #BDA778;
+}
+
+.fa-star{
+    color: #54483A;
+}
+
+.titleItem{
+    padding-bottom: 1em;
+    border-bottom: solid 2px #BF9780;
+    font-size: 2em;
+
+}
+
+.position{
+    background-color: #BF9780;
+    color: #3D4034;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: 400;
+    margin-right: 0.5em;
+}
+
+.synopsis{
+    font-size: 1.2em;
+    color: #54483A;
+    font-style: oblique;
+    font-weight: 700;
+
+}
+
+.mainImage{
+    float: left;
+    margin-right: 1em;
+    height: 250px;
+}
+
