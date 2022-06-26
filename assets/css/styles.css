@@ -10,8 +10,6 @@ Ubuntu:wght@400;500;700
 font-family: 'Ubuntu', sans-serif;
 */
 
-
-
 * {
     padding: 0px;
     margin: 0px;
@@ -21,27 +19,58 @@ font-family: 'Ubuntu', sans-serif;
 }
 
 
-a {
-    text-decoration: none;
-    color: #BF9780;
+.content {
+    padding: 1em;
 }
 
-a:hover{
-    opacity: 0.8 ;
+/* las filas se colocarán una sobre otra */
+td {
+    display: block;
+}
+
+/* quitar head de tabla */
+th {
+    display: none;
+}
+
+/* selecciona el elemento basado en su posición 
+cuando está al lado de otras etiquetas del mismo tipo  */
+td:nth-of-type(1) {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #54483A;
+}
+
+a:hover {
+    opacity: 0.8;
 }
 
 /* a: visited | active | focus */
-a:focus{
+a:focus {
     background-color: #00000035;
+    color: #3D4034;
+
 }
 
 .title {
     text-transform: uppercase;
 }
 
-h2{
+h2 {
     margin-bottom: 1em;
 }
+
+
+
 
 .container {
     background: #BF9780;
@@ -53,37 +82,39 @@ h2{
     height: 100vh;
     display: flex;
     justify-content: center;
-	align-items: center;
+    align-items: flex-start;
+    overflow-y: hidden;
 }
 
 .content {
-    max-width: 960px;
+    max-width: 1200px;
     max-height: 600px;
     width: 100%;
-    height: 100%;
+    height: 80vh;
     background-color: #F2F0D5;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23) ;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     /* diferenciaHorizontal  diferenciaVertical desenfoque amplitud color */
     border-radius: 4px;
-    position: absolute; /* elemento posicionado */
+    position: absolute;
+    /* elemento posicionado */
     margin-top: 100px;
-    padding: 1.8em;
+    overflow: scroll;
 
 }
 
-.actions{
+.actions {
     position: absolute;
     top: 1em;
     right: 1em;
 }
 
-.close{
+.close {
     height: 40px;
     width: 40px;
-    color: #F2F0D5 !important;
+    color: #F2F0D5;
     border-radius: 50%;
     background-color: #BF9780;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6 px rgba(0,0,0,0.23);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -96,40 +127,43 @@ h2{
     text-align: justify;
 }
 
-.table{
+.table {
     width: 100%;
-    border-spacing:0;
+    border-spacing: 0;
 
 }
-.table td, .table th{
+
+.table td,
+.table th {
     padding: 1em;
     text-align: left;
 }
-.table tr:nth-child(even){
-background-color: #BDA778;
+
+.table tr:nth-child(even) {
+    background-color: #BDA778;
 }
 
-.fa-star{
+.fa-star {
     color: #54483A;
 }
 
-.titleItem{
+.titleItem {
     padding-bottom: 1em;
     border-bottom: solid 2px #BF9780;
     font-size: 2em;
 
 }
 
-.position{
+.position {
     background-color: #BF9780;
     color: #3D4034;
-    padding: 10px;
+    padding: .5em;
     border-radius: 4px;
     font-weight: 400;
     margin-right: 0.5em;
 }
 
-.synopsis{
+.synopsis {
     font-size: 1.2em;
     color: #54483A;
     font-style: oblique;
@@ -137,9 +171,50 @@ background-color: #BDA778;
 
 }
 
-.mainImage{
+.mainImage {
     float: left;
     margin-right: 1em;
     height: 250px;
+    border-radius: 8px;
+
 }
 
+footer {
+    margin-top: 48px;
+    color: #3d4034bf;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 2px;
+    font-weight: 700;
+}
+
+
+@media (min-width:900px) {
+    th {
+        display: table-cell;
+    }
+
+    td {
+        display: table-cell;
+        width: auto;
+    }
+
+    td:nth-of-type(1) {
+        font-size: 1em;
+    }
+
+    .content {
+        padding: 1.8em;
+        overflow: hidden;
+
+    }
+
+
+}
+
+@media (max-width:500px) {
+    .content {
+        height: 500px;
+    }
+}
